@@ -5,7 +5,7 @@ function inicializa(event){
 	event.preventDefault();
 	var nombre = prompt("Bienvenidas, ingrese su nombre");
 	//nombreSession.innerText = "Hola Glisse  ☰";
-	nombreSession.innerHTML = "Hola " + nombre + "      <button onclick='functionMenu()' class='dropbtn'>☰</button>      <div id='myDropdown' class='dropdown-content'>        <a href='#'>Perfil</a>        <a href='#l'>Salir</a>      </div>    "
+	nombreSession.innerHTML = "Hola " + nombre + "      <button onclick='functionMenu()' class='dropbtn'>☰</button>      <div id='myDropdown' class='dropdown-content'>        <a href='#coders'>Coders</a>        <a href='#logout'>Salir</a>      </div>    "
 }
 function functionMenu() {
 	document.getElementById("myDropdown").classList.toggle("show");

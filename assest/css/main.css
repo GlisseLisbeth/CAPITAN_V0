@@ -57,3 +57,7 @@
 #sprint3{
 	display : none;
 }
+
+#rectangulo {
+border: solid 1px #000;
+}
