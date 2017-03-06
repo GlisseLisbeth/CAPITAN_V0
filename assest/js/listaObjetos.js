@@ -54,7 +54,7 @@ laboratoria = [
 function imprimir(laboratoria){
   var texto = "<table><tr>";
       laboratoria.forEach(function(e){
-        texto +=  "<td><canvas id='rectangulo' width='300' height='150' style='background-color:#FCB425'>"
+        texto +=  "<td><canvas id='rectangulo' width='300' height='150' style='background-color:yellow'>"
         +"<label for='nombre'>Nombre:</label>"+e.nombre+"<br>"
         +"<label for='apellido'>Apellido:</label>"+e.apellido+"<br>"
         +"<label for='promocion'>Promocion:</label>"+e.promocion+"<br>"
