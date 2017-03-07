@@ -25,13 +25,11 @@ window.onclick = function(event) {
 	}
 }
 
-var mostrarOcultar = function(divtexte) {
-	var divtext = document.getElementById(divtexte);
-	if (divtext.style.display == "block" ) {
-		divtext.style.display = "none";
-	} else{
-		divtext.style.display = "block";
-	}
+var mostrar= function(elementId) {
+  document.getElementById("sprint1").style.display="none";
+  document.getElementById("sprint2").style.display="none";
+  document.getElementById("sprint3").style.display="none";
+  document.getElementById(elementId).style.display="block";
 }
 
 buttonQuiz2.addEventListener("click", function(){
