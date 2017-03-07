@@ -1,5 +1,5 @@
 var reporte = document.getElementById("reporte");
-laboratoria = [
+coders = [
   {
     nombre: "Meche",
     apellido: "Zubieta",
@@ -50,21 +50,12 @@ laboratoria = [
   }
 ];
 
+function mostrarCoders(){
+  for (var i in coders) {
+    document.getElementsByClassName("div-coder")[i].innerHTML +=
 
-function imprimir(laboratoria){
-  var texto = "<table><tr>";
-      laboratoria.forEach(function(e){
-        texto +=  "<td><canvas id='rectangulo' width='300' height='150' style='background-color:yellow'>"
-        +"<label for='nombre'>Nombre:</label>"+e.nombre+"<br>"
-        +"<label for='apellido'>Apellido:</label>"+e.apellido+"<br>"
-        +"<label for='promocion'>Promocion:</label>"+e.promocion+"<br>"
-        +"<label for='cumpleanio'>Estado:</label>"+e.estado+"<br>"
-        +"</canvas> </td>";
-      });
-      texto = "</tr></table>"
-  return texto;
-}
-
-function imprimirTodos(){
-  reporte.innerHTML=imprimir(laboratoria);
-}
+    "<p> Nombre: "+coders[i].nombre+"</p>"+
+    "<p> Apellido: "+coders[i].apellido+"</p>"+
+    "<p> Promoción: "+coders[i].promocion+"</p>"+
+    "<p> Estado: "+coders[i].estado+ "</p>";}
+};mostrarCoders();
