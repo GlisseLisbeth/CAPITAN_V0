@@ -1,15 +1,16 @@
-var nombreSession = document.getElementsByTagName('div')[0];
+//Botones para enviar respuestas según los quizes
 var buttonQuiz1 = document.getElementById('enviarSprint1');
 var buttonQuiz2 = document.getElementById('enviarSprint2');
+
 //Almacenar nombre:
 var myParam = location.search.split('nombre=')[1]
 var nombre = document.getElementById('usuario');
- if (myParam == undefined) {
+ if (myParam == undefined) { // Si esta vacio solicitar nombre
 		 var inicio = prompt('Cual es tu nombre');
 		 inicio = inicio.toString().toLowerCase();
 		 inicio = inicio.charAt(0).toUpperCase()+inicio.slice(1);
 		 nombre.innerHTML = inicio;
- } else {
+ } else { //Sino mostar nombre almacenado
 		 nombre.innerHTML = myParam;
  }
  document.getElementById("coders").addEventListener('click',function() {
@@ -17,7 +18,7 @@ var nombre = document.getElementById('usuario');
  })
 
 
-
+//Dropdown
  function functionMenu() {
  	document.getElementById("myDropdown").classList.toggle("show");
  }
@@ -26,8 +27,7 @@ var nombre = document.getElementById('usuario');
  	if (!event.target.matches('.dropbtn')) {
 
  		var dropdowns = document.getElementsByClassName("dropdown-content");
- 		var i;
- 		for (i = 0; i < dropdowns.length; i++) {
+ 		for (var i = 0; i < dropdowns.length; i++) {
  			var openDropdown = dropdowns[i];
  			if (openDropdown.classList.contains('show')) {
  				openDropdown.classList.remove('show');
@@ -36,6 +36,7 @@ var nombre = document.getElementById('usuario');
  	}
  }
 
+//Funcion para seleccionar sprint:
  var mostrar= function(elementId) {
    document.getElementById("sprint1").style.display="none";
    document.getElementById("sprint2").style.display="none";
@@ -43,6 +44,7 @@ var nombre = document.getElementById('usuario');
    document.getElementById(elementId).style.display="block";
  }
 
+// Funciones para validar respuestas:
  buttonQuiz2.addEventListener("click", function(){
  	var respuestaQuiz2 = 0
  	var respuesta21 = document.getElementById('22');
@@ -59,7 +61,7 @@ var nombre = document.getElementById('usuario');
  		respuestaQuiz2++;
  	}
 
- 	respuestasQUIZES2.innerHTML = "<hr> <p>	Tienes "+respuestaQuiz2+"correctas</p>"
+ 	respuestasQUIZES2.innerHTML = "<hr> <p>	Tienes "+respuestaQuiz2+"correctas</p>" //Muestra resultado:
 
  });
 
@@ -79,6 +81,6 @@ var nombre = document.getElementById('usuario');
  		respuestaQuiz1++;
  	}
 
- 	respuestasQUIZES1.innerHTML = "<hr> <p>	Tienes "+respuestaQuiz1+"correctas</p>"
+ 	respuestasQUIZES1.innerHTML = "<hr> <p>	Tienes "+respuestaQuiz1+"correctas</p>" //Muestra resultado:
 
  });

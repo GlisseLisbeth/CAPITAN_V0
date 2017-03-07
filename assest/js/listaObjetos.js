@@ -50,10 +50,11 @@ coders = [
   }
 ];
 
+//Funcion para mostrar lista de coders:
 function mostrarCoders(){
-  for (var i in coders) {
+  for (var i in coders) { //Itera en cada objeto del array:
     document.getElementsByClassName("div-coder")[i].innerHTML +=
-
+    //Mostrar cada objeto con el texto que definimos abajo:
     "<p> Nombre: "+coders[i].nombre+"</p>"+
     "<p> Apellido: "+coders[i].apellido+"</p>"+
     "<p> Promoción: "+coders[i].promocion+"</p>"+
