@@ -104,66 +104,71 @@ buttonQuiz2.addEventListener("click", function(event){
 
 
 function validacion2(){
-		var seleccionado = false;
-	for(var i=0; i<opciones.length; i++) {
+	var seleccionado1 = false;
+  var seleccionado2 = false;
+  var seleccionado3 = false;
+
+  for(var i=0; i<opciones.length; i++) {
 		if(opciones[i].checked) {
-			seleccionado = true;
+			seleccionado1 = true;
 			break; }
 		}
-		if(!seleccionado) {
+		if(!seleccionado1) {
 
 			return alert("Ingrese una opcion");
 		}
-	for(var i=0; i<opciones1.length; i++) {
-		if(opciones1[i].checked) {
-				seleccionado = true;
+	for(var j=0; j<opciones1.length; j++) {
+		if(opciones1[j].checked) {
+				seleccionado2 = true;
 				break; }
 		}
-		if(!seleccionado) {
+		if(!seleccionado2) {
 
 				return alert("Ingrese una opcion");
 		}
-	for(var i=0; i<opciones2.length; i++) {
-			if(opciones2[i].checked) {
-					seleccionado = true;
+	for(var k=0; k<opciones2.length; k++) {
+			if(opciones2[k].checked) {
+					seleccionado3 = true;
 					break; }
 			}
-			if(!seleccionado) {
+      if(!seleccionado3) {
 
-					return alert("Ingrese una opcion");
-			}
-
-      return seleccionado;
+  				return alert("Ingrese una opcion");
+  		}
+      return seleccionado1 && seleccionado2 && seleccionado3;
 }
 
 function validacion1(){
-  var seleccionado = false;
+  var seleccionado1 = false;
+  var seleccionado2 = false;
+  var seleccionado3 = false;
+
   for(var i=0; i<opciones3.length; i++) {
 				if(opciones3[i].checked) {
-						seleccionado = true;
+						seleccionado1 = true;
 						break; }
 				}
-				if(!seleccionado) {
+				if(!seleccionado1) {
 
 						return alert("Ingrese una opcion");
 				}
-	for(var i=0; i<opciones4.length; i++) {
-			 if(opciones4[i].checked) {
-									seleccionado = true;
+	for(var j=0; j<opciones4.length; j++) {
+			 if(opciones4[j].checked) {
+									seleccionado2 = true;
 									break; }
 							}
-							if(!seleccionado) {
+							if(!seleccionado2) {
 
 									return alert("Ingrese una opcion");
 							}
-	for(var i=0; i<opciones5.length; i++) {
-			if(opciones5[i].checked) {
-				seleccionado = true;
+	for(var k=0; k<opciones5.length; k++) {
+			if(opciones5[k].checked) {
+				seleccionado3 = true;
 				break; }
-													}
-			if(!seleccionado) {
+			}
+			if(!seleccionado3) {
 
 				return alert("Ingrese una opcion");
-													}
-     return seleccionado;
+		 }
+     return seleccionado1 && seleccionado2 && seleccionado3;
 }
