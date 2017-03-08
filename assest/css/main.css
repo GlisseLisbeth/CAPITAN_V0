@@ -79,6 +79,7 @@ input {
 .dropdown {
   position: relative;
   display: inline-block;
+  float: right;
 }
 
 .dropdown-content {
@@ -119,5 +120,5 @@ input {
 }
 
 #rectangulo {
-border: solid 1px #000;
+  border: solid 1px #000;
 }

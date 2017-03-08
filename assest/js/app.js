@@ -16,9 +16,9 @@ var temaSprint2 = document.getElementById("temaSprint2");
 var opciones = document.getElementsByName("grouQuiz21");
 var opciones1 = document.getElementsByName("grouQuiz22");
 var opciones2 = document.getElementsByName("grouQuiz23");
-var opciones3 = document.getElementById("groupQuiz11");
-var opciones4 = document.getElementById("groupQuiz12");
-var opciones5 = document.getElementById("groupQuiz13");
+var opciones3 = document.getElementsByName("groupQuiz11");
+var opciones4 = document.getElementsByName("groupQuiz12");
+var opciones5 = document.getElementsByName("groupQuiz13");
 
 var tema = document.getElementById('tema');
 var respuestaQuiz1 = 0;
@@ -37,14 +37,7 @@ var nombre = document.getElementById('usuario');
  }
  document.getElementById("coders").addEventListener('click',function() {
 		 this.href += "?nombre="+nombre.innerHTML;
- })
-//Dropdown
-function functionMenu() {
-	document.getElementById("myDropdown").classList.toggle("show");
-}
-
-window.onclick = function(event) {
-	if (!event.target.matches('.dropbtn')) {
+ });
 
 //Dropdown
  function functionMenu() {
@@ -87,7 +80,7 @@ buttonQuiz1.addEventListener("click", function(event){
   	if(respuesta13.checked){
   		respuestaQuiz1++;
   	}
-  	respuestasQUIZES1.innerHTML = "<hr> <p>	Tienes "+respuestaQuiz1+"correctas</p>"
+  	respuestasQUIZES1.innerHTML = "<p>	Tienes "+respuestaQuiz1+" correctas</p>"
   }
 });
 
