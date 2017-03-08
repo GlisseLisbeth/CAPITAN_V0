@@ -7,13 +7,13 @@
   <title>Capitán</title>
   <link rel="stylesheet" href="assest/css/main.css">
 </head>
-<body onload="inicializa(event)">
+<body>
   <header>
-    <div  class="dropdown">Hola Maria
+    <div  class="dropdown">Hola <label id="usuario"></label>
       <button onclick="functionMenu()" class="dropbtn">&#9776;</button>
       <div id="myDropdown" class="dropdown-content">
-        <a href="coders.html">Coders</a>
-        <a href="hastaLuego.html">Salir</a>
+        <a href="coders.html" id="coders">Coders</a>
+        <a href="hastaLuego.html" id="salir">Salir</a>
       </div>
     </div>
     <br><br><br>
@@ -25,87 +25,76 @@
       <h1>¿Qué es Laboratoria?</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea harum dolorius iusto ex ipsam praesentium in culpa voluptas similique optio quibusdam exceptiru eos, error soluta veniam eum itaque vel odio! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea harum dolorius iusto ex ipsam praesentium in culpa voluptas similique optio quibusdam exceptiru eos, error soluta veniam eum itaque vel odio!</p>
       <h5>Temas</h5>
-        <input type="button" value="Sprint 1" onclick="mostrarOcultar('sprint1')">
-        <input type="button" value="Sprint 2" onclick="mostrarOcultar('sprint2')">
-        <input type="button" value="Sprint 3" onclick="mostrarOcultar('sprint3')">
+      <input type="button" value="Sprint 1" onclick="mostrar('sprint1')">
+      <input type="button" value="Sprint 2" onclick="mostrar('sprint2')">
+      <input type="button" value="Sprint 3" onclick="mostrar('sprint3')">
       <!--sprint1-->
       <div id="sprint1">
-          <h2>Sprint 1: Introducción a  Javascript</h2>
-          <ol>
-            <li>Fundamentos de Programación</li>
-            <li>Funciones</li>
-            <li>Arreglos</li>
-            <li>Objetos</li>
-          </ol>
-          <h2>Quiz</h2>
+        <h2>Sprint 1: Introducción a  Javascript</h2>
+        <ol>
+          <li>Fundamentos de Programación</li>
+          <li>Funciones</li>
+          <li>Arreglos</li>
+          <li>Objetos</li>
+        </ol>
         <hr>
-        <div id = "temaSprint1">
-          <form  id = "formSprint1" class="" action="index.html" method="post">
-          <br>
-          <h2>Existen dos tipos de funciones</h2>
-          <input id="11"type="radio" name ="groupQuiz11" value="Expresadas y declaradas">Expresadas y declaradas
-          <input id="12"type="radio" name ="groupQuiz11" value="Explicitas y declaradas">Explicitas y declaradas
-          <input id="13"type="radio" name ="groupQuiz11" value="Expresadas y derivadas">Expresadas y derivadas
-          <br>
-          <h2>Elige una propiedad de los arreglos</h2>
-          <input id="14"type="radio" name ="groupQuiz12" value="clear">clear
-          <input id="15"type="radio" name ="groupQuiz12" value="pop">pop
-          <input id="16"type="radio" name ="groupQuiz12" value="add">add
-          <br>
-          <h2>Un objeto tiene ________ y __________</h2>
-          <input id="17"type="radio" name ="groupQuiz13" value="numeros y letras">numeros y letras
-          <input id="18"type="radio" name ="groupQuiz13" value="partes y validacciones">partes y validacciones
-          <input id="19"type="radio" name ="groupQuiz13" value="propiedades y valores">propiedades y valores
-          <br>
-          <br>
-          <button id="enviarSprint1">ENVIAR</button>
-        </form>
-      </div>
-      <div id="respuestasprint1"></div>
-  </div>
+        <h2>Quiz</h2>
+        <br>
+        <h2>Existen dos tipos de funciones</h2>
+        <input id="11"type="radio" name ="groupQuiz11" value="Expresadas y declaradas">Expresadas y declaradas
+        <input id="12"type="radio" name ="groupQuiz11" value="Explicitas y declaradas">Explicitas y declaradas
+        <input id="13"type="radio" name ="groupQuiz11" value="Expresadas y derivadas">Expresadas y derivadas
+        <br>
+        <h2>Elige una propiedad de los arreglos</h2>
+        <input id="14"type="radio" name ="groupQuiz12" value="clear">clear
+        <input id="15"type="radio" name ="groupQuiz12" value="pop">pop
+        <input id="16"type="radio" name ="groupQuiz12" value="add">add
+        <br>
+        <h2>Un objeto tiene ________ y __________</h2>
+        <input id="17"type="radio" name ="groupQuiz13" value="numeros y letras">numeros y letras
+        <input id="18"type="radio" name ="groupQuiz13" value="partes y validacciones">partes y validacciones
+        <input id="19"type="radio" name ="groupQuiz13" value="propiedades y valores">propiedades y valores
+        <br>
+        <br>
+        <button id="enviarSprint1">ENVIAR</button>
+        <div id="respuestasprint1"></div>
+      </div>
       <!--fin de sprint1-->
       <!--sprint2-->
       <div id="sprint2">
-
-          <h2>Sprint 2: Introducción al desarrollo web y construcción de páginas web</h2>
-          <ol>
-            <li>Ciclo de vida del desarollo web y arquitectura básica cliente/servidor / Configuración del ambiente de trabajo e introducción al git</li>
-            <li>HTML y  Javascript en el navegador</li>
-            <li>Manejo de comandos básicos de git en la terminal</li>
-            <li>Pruebas Unitarias</li>
-            <li>Git / Resolución de conflictos / Branching Model</li>
-            <li>DOM</li>
-          </ol>
-          <hr>
-          <h2>Quiz</h2>
-        
-        <div id = "temaSprint2">
-        <form  id = "formSprint2" class="" action="index.html" method="post">
-
-          <h2>¿Cuál es el comando para iniciar un repositorio desde la consola?</h2>
-          <input id="21" type="radio" name="grouQuiz21" value="git init.">git init.<br>
-          <input id="22" type="radio" name="grouQuiz21" value="git init">git init<br>
-          <input id="23" type="radio" name="grouQuiz21" value="git init add">git init add
-          <br>
-          <h2>¿Cuál es la finalidad de hacer una prueba unitaria?</h2>
-          <input id="24" type="radio" name="grouQuiz22" value="Comprobar que el código funciona correctamente">Comprobar que el código funciona correctamente<br>
-          <input id="25" type="radio" name="grouQuiz22" value="Darle Valores a los parámetros de dichas funciones">Darle Valores a los parámetros de dichas funciones<br>
-          <input id="26" type="radio" name="grouQuiz22" value="No tiene ningún fin">No tiene ningún fin
-          <br>
-          <h2>¿Qué significa DOM?</h2>
-          <input id="27" type="radio" name="grouQuiz23" value="Dual Object Model">Dual Object Model<br>
-          <input id="28" type="radio" name="grouQuiz23" value="Document Objet Model">Document Objet Model<br>
-          <input id="29" type="radio" name="grouQuiz23" value="Document Obsolet Model">Document Obsolet Model
-          <br>
-          <br>
-          <button id="enviarSprint2">ENVIAR</button>
-        </form>
-        </div>
-      <div id="respuestasprint2"></div>
-  </div>
+        <h2>Sprint 2: Introducción al desarrollo web y construcción de páginas web</h2>
+        <ol>
+          <li>Ciclo de vida del desarollo web y arquitectura básica cliente/servidor / Configuración del ambiente de trabajo e introducción al git</li>
+          <li>HTML y  Javascript en el navegador</li>
+          <li>Manejo de comandos básicos de git en la terminal</li>
+          <li>Pruebas Unitarias</li>
+          <li>Git / Resolución de conflictos / Branching Model</li>
+          <li>DOM</li>
+        </ol>
+        <hr>
+        <h2>Quiz</h2>
+        <h2>¿Cuál es el comando para iniciar un repositorio desde la consola?</h2>
+        <input id="21" type="radio" name="grouQuiz21" value="git init.">git init.<br>
+        <input id="22" type="radio" name="grouQuiz21" value="git init">git init<br>
+        <input id="23" type="radio" name="grouQuiz21" value="git init add">git init add
+        <br>
+        <h2>¿Cuál es la finalidad de hacer una prueba unitaria?</h2>
+        <input id="24" type="radio" name="grouQuiz22" value="Comprobar que el código funciona correctamente">Comprobar que el código funciona correctamente<br>
+        <input id="25" type="radio" name="grouQuiz22" value="Darle Valores a los parámetros de dichas funciones">Darle Valores a los parámetros de dichas funciones<br>
+        <input id="26" type="radio" name="grouQuiz22" value="No tiene ningún fin">No tiene ningún fin
+        <br>
+        <h2>¿Qué significa DOM?</h2>
+        <input id="27" type="radio" name="grouQuiz23" value="Dual Object Model">Dual Object Model<br>
+        <input id="28" type="radio" name="grouQuiz23" value="Document Objet Model">Document Objet Model<br>
+        <input id="29" type="radio" name="grouQuiz23" value="Document Obsolet Model">Document Obsolet Model
+        <br>
+        <br>
+        <button id="enviarSprint2">ENVIAR</button>
+        <div id="respuestasprint2"></div>
+      </div>
       <!--fin de sprint2-->
       <!--sprint3-->
-      <div id = "sprint3">
+      <div id="sprint3">
         <h2>Sprint 3: Introducción a  Javascript</h2>
         <p>No hay lecciones (Todavia)</p>
       </div>

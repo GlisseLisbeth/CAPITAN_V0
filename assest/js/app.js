@@ -24,12 +24,21 @@ var tema = document.getElementById('tema');
 var respuestaQuiz1 = 0;
 var respuestaQuiz2 = 0;
 
-function inicializa(event){
-	event.preventDefault();
-	var nombre = prompt("Bienvenidas, ingrese su nombre");
-	//nombreSession.innerText = "Hola Glisse  ☰";
-	nombreSession.innerHTML = "Hola " + nombre + "      <button onclick='functionMenu()' class='dropbtn'>☰</button>      <div id='myDropdown' class='dropdown-content'>        <a href='coders.html'>Coders</a>        <a href='hastaLuego.html'>Salir</a>      </div>    "
-}
+//Almacenar nombre:
+var myParam = location.search.split('nombre=')[1]
+var nombre = document.getElementById('usuario');
+ if (myParam == undefined) { // Si esta vacio solicitar nombre
+		 var inicio = prompt('Cual es tu nombre');
+		 inicio = inicio.toString().toLowerCase();
+		 inicio = inicio.charAt(0).toUpperCase()+inicio.slice(1);
+		 nombre.innerHTML = inicio;
+ } else { //Sino mostar nombre almacenado
+		 nombre.innerHTML = myParam;
+ }
+ document.getElementById("coders").addEventListener('click',function() {
+		 this.href += "?nombre="+nombre.innerHTML;
+ })
+//Dropdown
 function functionMenu() {
 	document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -48,14 +57,15 @@ window.onclick = function(event) {
 	}
 }
 
-var mostrarOcultar = function(divtexte) {
-	document.getElementById("sprint1").style.display = "none";
-	document.getElementById("sprint2").style.display = "none";
-	document.getElementById("sprint3").style.display = "none";
-	document.getElementById(divtexte).style.display = "block";
+//Funcion para seleccionar sprint:
+ var mostrar= function(elementId) {
+   document.getElementById("sprint1").style.display="none";
+   document.getElementById("sprint2").style.display="none";
+   document.getElementById("sprint3").style.display="none";
+   document.getElementById(elementId).style.display="block";
+ }
 
-}
-
+// Funciones para validar respuestas:
 buttonQuiz1.addEventListener("click", function(event){
 	event.preventDefault();
   if(validacion1()){
